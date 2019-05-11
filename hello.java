@@ -21,7 +21,7 @@
         static class MyHandler implements HttpHandler {
             @Override
             public void handle(HttpExchange t) throws IOException {
-                String response = "This is the response3";
+                String response = " This is the response3";
                 t.sendResponseHeaders(200, response.length());
                 OutputStream os = t.getResponseBody();
                 os.write(response.getBytes());
