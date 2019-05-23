@@ -1,0 +1,11 @@
+ Volume in drive C is Windows
+ Volume Serial Number is 4A13-45D1
+
+ Directory of C:\Temp\hellojava
+
+23/05/2019  11:22 PM    <DIR>          .
+23/05/2019  11:22 PM    <DIR>          ..
+23/05/2019  11:22 PM                 0 dir.txt
+23/05/2019  11:20 PM             1,108 hello.java
+               2 File(s)          1,108 bytes
+               2 Dir(s)   3,836,854,272 bytes free
