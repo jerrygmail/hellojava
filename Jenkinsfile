@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('trying blue ocean') {
       steps {
         echo 'hello world'
         sleep 5
