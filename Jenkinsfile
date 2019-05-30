@@ -4,7 +4,7 @@ pipeline {
     stage('trying blue ocean') {
       steps {
         echo 'hello world'
-                sleep 5
+        sleep 5
         isUnix()
         pwd()
       }
@@ -17,6 +17,7 @@ pipeline {
     stage('deploy') {
       steps {
         echo 'Copying to artifactory'
+        bat(script: 'c:\\artifactory\\copyartifact.bat', returnStatus: true, returnStdout: true)
       }
     }
   }
