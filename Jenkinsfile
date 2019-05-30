@@ -17,7 +17,6 @@ pipeline {
     stage('deploy') {
       steps {
         echo 'Copying to artifactory'
-        curl -uadmin:password -T C:\Jerry\java\hello.class "http://localhost:8081/artifactory/example-repo-local/"
       }
     }
   }
