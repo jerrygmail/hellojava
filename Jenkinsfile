@@ -20,5 +20,13 @@ pipeline {
         bat(script: 'c:\\artifactory\\copyartifact.bat', returnStatus: true, returnStdout: true)
       }
     }
+     post { 
+        success { 
+            echo 'Success!'
+        }
+        failure { 
+            echo 'Build failed!'
+        }
+    }
   }
 }
