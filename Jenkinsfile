@@ -7,20 +7,20 @@ pipeline {
         sleep 5
         isUnix()
         pwd()
-        echo "$BUILD_NUMBER"
-echo "$BUILD_ID"
-echo "$BUILD_DISPLAY_NAME"
-echo "$JOB_NAME"
-echo "$JOB_BASE_NAME"
-echo "$BUILD_TAG"
-echo "$EXECUTOR_NUMBER"
-echo "$NODE_NAME"
-echo "$NODE_LABELS"
-echo "$WORKSPACE"
-echo "$JENKINS_HOME"
-echo "$JENKINS_URL"
-echo "$BUILD_URL"
-echo "$JOB_URL"
+        echo "Buildnumber:$BUILD_NUMBER"
+echo "Build id:$BUILD_ID"
+echo "$Build display name:BUILD_DISPLAY_NAME"
+echo "Job Name:$JOB_NAME"
+echo "Job Base Name:$JOB_BASE_NAME"
+echo "Build Tag:$BUILD_TAG"
+echo "Executor Number:$EXECUTOR_NUMBER"
+echo "Node name:$NODE_NAME"
+echo "Node Labels:$NODE_LABELS"
+echo "Workspace:$WORKSPACE"
+echo "Jenkins Home:$JENKINS_HOME"
+echo "Jenkins URL:$JENKINS_URL"
+echo "Build URL:$BUILD_URL"
+echo "Job URL:$JOB_URL"
       }
     }
     stage('stage2') {
