@@ -42,9 +42,11 @@ echo "Job URL:$JOB_URL"
      post { 
         success { 
             echo 'Success!'
+            mail to:"someone@hotmail.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "Yay, we passed."
         }
         failure { 
             echo 'Build failed!'
+          mail to:"someone@hotmail.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Boo, we failed."
         }
     }
   }
