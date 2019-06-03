@@ -1,7 +1,5 @@
 pipeline {
-    when {
-branch 'prod'
-}
+
   agent any
 
   triggers {
@@ -12,6 +10,9 @@ branch 'prod'
           }
   stages {
     stage('trying blue ocean') {
+          when {
+	branch 'prod'
+	}
       steps {
         echo "Hello ${params.PERSON}"
         echo 'hello world'
@@ -35,11 +36,17 @@ echo "Job URL:$JOB_URL"
       }
     }
     stage('stage2') {
+    when {
+	branch 'prod'
+	}
       steps {
         echo 'This stage 2'
       }
     }
     stage('deploy') {
+	    when {
+	branch 'prod'
+	}
       steps {
         echo 'Copying to artifactory'
         bat(script: 'c:\\artifactory\\copyartifact.bat', returnStatus: true, returnStdout: true)
@@ -47,6 +54,9 @@ echo "Job URL:$JOB_URL"
     }
   }
      post { 
+	    when {
+	branch 'prod'
+	}
         success { 
             echo 'Success!'
             mail to:"jerry.manaloto@sprint.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "Yay, we passed."
