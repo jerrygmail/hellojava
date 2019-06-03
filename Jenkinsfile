@@ -49,7 +49,7 @@ echo "Job URL:$JOB_URL"
 	}
       steps {
         echo 'Copying to artifactory'
-        bat(script: "copyartifact.bat $JOB_NAME $BUILD_NUMBER", returnStatus: true, returnStdout: true)
+        bat(script: "copyartifact.bat $JOB_BASE_NAME $BUILD_NUMBER", returnStatus: true, returnStdout: true)
       }
     }
   }
