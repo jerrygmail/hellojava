@@ -1,5 +1,9 @@
 pipeline {
+    when {
+branch 'prod'
+}
   agent any
+
   triggers {
         pollSCM '* * * * *'
     }
