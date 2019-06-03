@@ -45,6 +45,7 @@ echo "Job URL:$JOB_URL"
      post { 
         success { 
             echo 'Success!'
+          echo 'test'
             mail to:"jerry.manaloto@sprint.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "Yay, we passed."
         }
         failure { 
