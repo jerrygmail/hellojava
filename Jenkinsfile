@@ -54,9 +54,7 @@ echo "Job URL:$JOB_URL"
     }
   }
      post { 
-	    when {
-	branch 'prod'
-	}
+	 
         success { 
             echo 'Success!'
           echo 'test'
