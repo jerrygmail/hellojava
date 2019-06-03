@@ -54,9 +54,7 @@ echo "Job URL:$JOB_URL"
     }
   }
      post { 
-	    when {
-	branch 'prod'
-	}
+	 
         success { 
             echo 'Success!'
             mail to:"jerry.manaloto@sprint.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "Yay, we passed."
