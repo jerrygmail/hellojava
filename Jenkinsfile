@@ -20,7 +20,7 @@ pipeline {
         isUnix()
         pwd()
         echo "Buildnumber:$BUILD_NUMBER"
-echo "Build id:$BUILD_ID"
+        echo "Build id:$BUILD_ID"
 echo "Build display name:$BUILD_DISPLAY_NAME"
 echo "Job Name:$JOB_NAME"
 echo "Job Base Name:$JOB_BASE_NAME"
