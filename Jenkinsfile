@@ -9,7 +9,7 @@ pipeline {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
           }
   stages {
-    stage('trying blue ocean') {
+    stage('build') {
           when {
 	branch 'prod'
 	}
