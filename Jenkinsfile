@@ -9,7 +9,7 @@ pipeline {
         string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
           }
   stages {
-    stage('trying blue ocean') {
+    stage('build') {
           when {
 	branch 'prod'
 	}
@@ -20,7 +20,7 @@ pipeline {
         isUnix()
         pwd()
         echo "Buildnumber:$BUILD_NUMBER"
-echo "Build id:$BUILD_ID"
+        echo "Build id:$BUILD_ID"
 echo "Build display name:$BUILD_DISPLAY_NAME"
 echo "Job Name:$JOB_NAME"
 echo "Job Base Name:$JOB_BASE_NAME"
@@ -49,7 +49,7 @@ echo "Job URL:$JOB_URL"
 	}
       steps {
         echo 'Copying to artifactory'
-        bat(script: 'c:\\artifactory\\copyartifact.bat', returnStatus: true, returnStdout: true)
+        bat(script: 'copyartifact.bat $BUILD_NUMBER', returnStatus: true, returnStdout: true)
       }
     }
   }
